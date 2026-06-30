@@ -1,0 +1,41 @@
+# ── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# ── Virtual environments ─────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+
+# ── Jupyter ──────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+
+# ── Test / tooling caches ────────────────────────────────────────────────────
+.pytest_cache/
+.ruff_cache/
+.coverage
+
+# ── ML / experiment tracking ─────────────────────────────────────────────────
+mlruns/
+catboost_info/
+*.log
+
+# ── Large / generated artifacts ──────────────────────────────────────────────
+# NOTE: trained models (*.pkl) ARE committed so the Streamlit demo works on a
+# fresh clone / Streamlit Cloud without retraining. Only the Optuna study DBs and
+# regenerable prediction CSVs are excluded.
+models/*.db
+outputs/predictions/*.csv
+
+# ── OS / IDE ─────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Keep folder structure even when empty
+!**/.gitkeep

@@ -1,0 +1,23 @@
+{
+  "created_utc": "2026-06-30T16:45:23.490794+00:00",
+  "task": "binary: REAL (confirmed+candidate) vs FALSE POSITIVE",
+  "classes": [
+    "FALSE POSITIVE",
+    "REAL"
+  ],
+  "n_features": 91,
+  "metrics": {
+    "cv_f1_mean": 0.9011779074415527,
+    "cv_f1_std": 0.007560859032384304,
+    "accuracy": 0.9064296915838996,
+    "precision": 0.9074468085106383,
+    "recall": 0.9026455026455027,
+    "f1": 0.9050397877984084,
+    "roc_auc": 0.9705693296602388,
+    "avg_precision": 0.970349114589223,
+    "train_f1": 0.950332005312085,
+    "overfit_gap": 0.045292217513676514
+  },
+  "n_train": 7651,
+  "n_test": 1913
+}

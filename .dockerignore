@@ -1,0 +1,12 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+.git/
+.github/
+.ipynb_checkpoints/
+mlruns/
+catboost_info/
+outputs/
+notebooks/
+*.md

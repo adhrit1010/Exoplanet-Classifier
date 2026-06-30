@@ -1,0 +1,16 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# RUNTIME dependencies — everything the Streamlit app + saved model need to run.
+# This is the lean set Streamlit Community Cloud installs (fast, reliable deploy).
+# For training / tuning / the notebook, use requirements-dev.txt instead.
+# Tested with Python 3.11–3.13.
+# ─────────────────────────────────────────────────────────────────────────────
+numpy>=1.26
+pandas>=2.1
+scipy>=1.11
+scikit-learn>=1.4
+matplotlib>=3.8
+seaborn>=0.13
+plotly>=5.20
+shap>=0.45
+joblib>=1.4
+streamlit>=1.33

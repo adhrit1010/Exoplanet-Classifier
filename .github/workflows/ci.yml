@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-dev.txt   # full stack incl. flake8 + pytest
+
+      - name: Lint (flake8)
+        run: flake8 src --count --max-line-length=100 --statistics
+
+      - name: Run tests
+        run: pytest -q
+
+      - name: Smoke-train (fast, leakage-safe)
+        run: python -m src.train --quick --no-slow --trials 5

@@ -1,0 +1,27 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# DEVELOPMENT dependencies — full stack for training, tuning, the notebook and CI.
+# Installs the runtime set plus the gradient boosters, Optuna, imbalanced-learn,
+# MLflow, Jupyter and the lint/test tools.
+#     pip install -r requirements-dev.txt
+# ─────────────────────────────────────────────────────────────────────────────
+-r requirements.txt
+
+# Gradient boosters (model zoo)
+xgboost>=2.0
+lightgbm>=4.3
+catboost>=1.2
+
+# Class imbalance + hyperparameter optimization
+imbalanced-learn>=0.12
+optuna>=3.6
+
+# Experiment tracking (bonus)
+mlflow>=2.12
+
+# Notebook
+jupyter>=1.0
+ipykernel>=6.29
+
+# Lint + test
+flake8>=7.0
+pytest>=8.0

@@ -1,0 +1,9 @@
+# Normalize line endings so the repo is consistent across Windows/macOS/Linux.
+* text=auto eol=lf
+
+# Treat these as binary (no diff/EOL conversion).
+*.pkl binary
+*.png binary
+*.jpg binary
+*.db binary
+*.ipynb binary
